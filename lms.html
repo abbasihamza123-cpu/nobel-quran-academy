@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nobel Quran Academy | Student LMS</title>
+<style>
+:root{--g:#0b5a38;--g2:#073d28;--gold:#d9aa2b;--bg:#f5f8f6;--ink:#18372b;--muted:#66776f;--line:#dce7e1}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+.top{background:var(--g2);color:white;padding:14px 5%;display:flex;justify-content:space-between;align-items:center}.brand{font-size:21px;font-weight:900}.brand span{color:#e3b632}
+.wrap{max-width:1100px;margin:30px auto;padding:0 18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 8px 25px #073d2810;margin-bottom:20px}
+.login{max-width:480px;margin:65px auto}.login h1{color:var(--g);margin-top:0}
+label{font-weight:700;display:block;margin:12px 0 6px}input,select,textarea{width:100%;padding:12px;border:1px solid #cbd9d1;border-radius:8px;font-size:15px}
+.btn{border:0;border-radius:8px;padding:11px 17px;background:var(--g);color:#fff;font-weight:800;cursor:pointer}.btn.gold{background:var(--gold);color:#222}.btn.outline{background:#fff;color:var(--g);border:1px solid var(--g)}
+.notice{background:#fff5d7;padding:12px;border-radius:9px;margin:15px 0}
+.hidden{display:none}.hero{display:flex;justify-content:space-between;gap:20px;align-items:center}.hero h1{color:var(--g);margin:0 0 5px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0}.stat{background:#fff;padding:18px;border-radius:12px;border:1px solid var(--line);text-align:center}.stat strong{display:block;font-size:25px;color:var(--g)}
+.progress{height:12px;background:#e8efeb;border-radius:99px;overflow:hidden}.bar{height:100%;background:var(--g);width:0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.tab{padding:10px 15px;border:1px solid var(--line);background:#fff;border-radius:8px;cursor:pointer;font-weight:700}.tab.active{background:var(--g);color:#fff}
+.lesson{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid var(--line);gap:10px}.lesson:last-child{border-bottom:0}.done{color:var(--g);font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.small{color:var(--muted);font-size:14px}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line)}th{color:var(--g)}
+footer{text-align:center;color:var(--muted);padding:35px}
+@media(max-width:750px){.stats,.grid{grid-template-columns:1fr 1fr}.hero{display:block}.lesson{align-items:flex-start;flex-direction:column}}
+@media(max-width:480px){.stats,.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="top"><div class="brand">Nobel <span>Quran Academy</span></div><button id="logout" class="btn outline hidden">Logout</button></div>
+
+<div id="loginPage" class="wrap">
+<div class="card login">
+<h1>🎓 Student LMS Login</h1>
+<p class="small">Access your Quran course, lessons and progress.</p>
+<label>Username</label><input id="username" placeholder="Enter username">
+<label>Password</label><input id="password" type="password" placeholder="Enter password">
+<button class="btn" style="width:100%;margin-top:15px" onclick="login()">Login</button>
+<div class="notice"><b>Demo account</b><br>Student: <code>student</code> / <code>1234</code><br>Admin: <code>admin</code> / <code>admin123</code></div>
+<p class="small">For the live production version, we will connect this LMS to a secure database and real student accounts.</p>
+</div></div>
+
+<div id="studentPage" class="wrap hidden">
+<div class="card hero">
+<div><p class="small">Welcome back 👋</p><h1 id="studentName">Student</h1><p>My Course: <b>Quran Reading</b></p></div>
+<a class="btn gold" href="https://wa.me/923115912292" target="_blank">💬 Teacher Support</a>
+</div>
+<div class="stats">
+<div class="stat"><strong id="percent">0%</strong>Progress</div>
+<div class="stat"><strong id="doneCount">0/5</strong>Lessons</div>
+<div class="stat"><strong>30 min</strong>Class Length</div>
+<div class="stat"><strong>Active</strong>Status</div>
+</div>
+<div class="card"><b>Course Progress</b><div style="margin-top:12px" class="progress"><div id="bar" class="bar"></div></div><p id="progressText" class="small">0% completed</p></div>
+<div class="tabs">
+<button class="tab active" onclick="showStudent('course',this)">📚 My Course</button>
+<button class="tab" onclick="showStudent('schedule',this)">📅 Schedule</button>
+<button class="tab" onclick="showStudent('notes',this)">📝 Teacher Notes</button>
+</div>
+<div id="course" class="card panel">
+<h2>📖 Quran Reading Course</h2>
+<p class="small">Complete each lesson after studying it with your teacher.</p>
+<div id="lessons"></div>
+</div>
+<div id="schedule" class="card panel hidden"><h2>📅 My Class Schedule</h2><table><tr><th>Day</th><th>Time</th><th>Course</th></tr><tr><td>Monday</td><td>7:00 PM</td><td>Quran Reading</td></tr><tr><td>Wednesday</td><td>7:00 PM</td><td>Quran Reading</td></tr><tr><td>Friday</td><td>7:00 PM</td><td>Tajweed Practice</td></tr></table><p class="small">Schedule shown is demo data and can later be managed by the admin.</p></div>
+<div id="notes" class="card panel hidden"><h2>📝 Teacher Notes</h2><div class="notice">Keep practicing correct pronunciation of the Arabic letters and revise today's lesson before the next class.</div><p class="small">Teacher notes will become editable from the admin/teacher panel in the database-connected version.</p></div>
+</div>
+
+<div id="adminPage" class="wrap hidden">
+<div class="card hero"><div><p class="small">Administrator Panel</p><h1>Academy Dashboard</h1><p>Manage students, courses and class information.</p></div></div>
+<div class="grid">
+<div class="card"><h3>👨‍🎓 Students</h3><h2>1</h2><p class="small">Demo student account</p></div>
+<div class="card"><h3>📚 Courses</h3><h2>6</h2><p class="small">Quran & Islamic Studies</p></div>
+<div class="card"><h3>📅 Classes</h3><h2>3</h2><p class="small">Demo weekly schedule</p></div>
+</div>
+<div class="card"><h2>Student List</h2><table><tr><th>Student</th><th>Course</th><th>Progress</th><th>Status</th></tr><tr><td>Demo Student</td><td>Quran Reading</td><td id="adminProgress">0%</td><td>Active</td></tr></table></div>
+<div class="card"><h2>Next Upgrade</h2><p>Connect a secure database for real student registration, individual accounts, attendance, teacher assignments, homework and progress tracking.</p><a class="btn" href="https://wa.me/923115912292" target="_blank">Contact Academy</a></div>
+</div>
+<footer>Nobel Quran Academy • Online Quran Learning • WhatsApp: 03115912292</footer>
+
+<script>
+const lessons=[
+"Quran Reading Basics",
+"Arabic Letters & Pronunciation",
+"Joining Letters",
+"Short Surahs Practice",
+"Tajweed Introduction"
+];
+let state=JSON.parse(localStorage.getItem('nobelLmsProgress')||'[]');
+function login(){
+ const u=document.getElementById('username').value.trim(),p=document.getElementById('password').value;
+ if(u==='student'&&p==='1234'){sessionStorage.setItem('role','student');showPage('student');renderLessons();}
+ else if(u==='admin'&&p==='admin123'){sessionStorage.setItem('role','admin');showPage('admin');renderAdmin();}
+ else alert('Login details are incorrect. Use the demo account shown below.');
+}
+function showPage(role){
+ document.getElementById('loginPage').classList.add('hidden');
+ document.getElementById(role+'Page').classList.remove('hidden');
+ document.getElementById('logout').classList.remove('hidden');
+}
+function renderLessons(){
+ const box=document.getElementById('lessons');box.innerHTML='';
+ lessons.forEach((x,i)=>{
+ const d=document.createElement('div');d.className='lesson';
+ const done=state.includes(i);
+ d.innerHTML=`<div><b>Lesson ${i+1}:</b> ${x}</div>${done?'<span class="done">✓ Completed</span>':`<button class="btn" onclick="complete(${i})">Mark Complete</button>`}`;
+ box.appendChild(d);
+ });
+ const pct=Math.round(state.length/lessons.length*100);
+ document.getElementById('percent').textContent=pct+'%';document.getElementById('doneCount').textContent=state.length+'/'+lessons.length;
+ document.getElementById('bar').style.width=pct+'%';document.getElementById('progressText').textContent=pct+'% completed';
+}
+function complete(i){if(!state.includes(i)){state.push(i);state.sort();localStorage.setItem('nobelLmsProgress',JSON.stringify(state));renderLessons();renderAdmin();}}
+function renderAdmin(){const pct=Math.round(state.length/lessons.length*100);document.getElementById('adminProgress').textContent=pct+'%';}
+function showStudent(id,btn){
+ document.querySelectorAll('#studentPage .panel').forEach(x=>x.classList.add('hidden'));
+ document.getElementById(id).classList.remove('hidden');
+ document.querySelectorAll('#studentPage .tab').forEach(x=>x.classList.remove('active'));btn.classList.add('active');
+}
+document.getElementById('logout').onclick=()=>{sessionStorage.clear();location.reload()};
+</script>
+</body>
+</html>
