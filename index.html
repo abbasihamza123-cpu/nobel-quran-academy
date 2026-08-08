@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nobel Quran Academy</title>
+<style>
+:root{--green:#0f5132;--gold:#d4a72c;--light:#f6fbf8;--dark:#123026}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:var(--dark);background:#fff;line-height:1.6}
+nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #e7eee9;display:flex;justify-content:space-between;align-items:center;padding:14px 7%;z-index:10}
+.logo{font-weight:800;color:var(--green);font-size:21px}.logo span{color:var(--gold)}
+nav a{margin-left:20px;text-decoration:none;color:var(--dark);font-weight:600}
+.hero{background:linear-gradient(135deg,#eaf7ef,#fff);padding:75px 7%;display:grid;grid-template-columns:1.3fr 1fr;gap:35px;align-items:center}
+h1{font-size:48px;line-height:1.1;margin:10px 0;color:var(--green)}h2{color:var(--green);font-size:32px}
+.btn{display:inline-block;background:var(--green);color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:700;margin:6px 5px 6px 0}.btn.gold{background:var(--gold);color:#222}
+.card{background:#fff;border:1px solid #e3ece6;border-radius:14px;padding:24px;box-shadow:0 8px 25px #0f51320d}
+.hero-card{background:var(--green);color:#fff;border-radius:18px;padding:35px}.hero-card h2{color:#fff}
+section{padding:55px 7%}.center{text-align:center}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.icon{font-size:32px}.card h3{color:var(--green);margin-top:8px}
+form{max-width:650px;margin:20px auto}.field{margin-bottom:14px}label{display:block;font-weight:700;margin-bottom:5px}input,select,textarea{width:100%;padding:12px;border:1px solid #ccd9d1;border-radius:8px;font-size:15px}
+footer{background:#102d23;color:#fff;text-align:center;padding:35px 7%}footer a{color:#f4d36e}
+#message{margin-top:15px;font-weight:700}
+@media(max-width:800px){.hero{grid-template-columns:1fr}h1{font-size:38px}.grid{grid-template-columns:1fr}nav{flex-wrap:wrap}nav div:last-child{width:100%;margin-top:8px}nav a{margin-right:10px;margin-left:0}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Nobel <span>Quran Academy</span></div>
+  <div>
+    <a href="#home">Home</a><a href="#courses">Courses</a><a href="#about">About</a><a href="#register">Register</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+ <div>
+  <p style="color:#d4a72c;font-weight:800">ONLINE QURAN EDUCATION</p>
+  <h1>Learn Quran Online<br>From Your Home</h1>
+  <p>One-to-one online Quran classes for children and adults with qualified male and female teachers.</p>
+  <a class="btn" href="#register">Start Free Trial</a>
+  <a class="btn gold" href="https://wa.me/9231115912292" target="_blank">WhatsApp Us</a>
+ </div>
+ <div class="hero-card">
+  <h2>Why Nobel Quran Academy?</h2>
+  <p>✓ 3 Days Free Trial</p><p>✓ Flexible Class Timings</p><p>✓ One-to-One 30-Minute Classes</p><p>✓ Male & Female Teachers</p><p>✓ Affordable Monthly Fees</p>
+ </div>
+</section>
+
+<section id="courses">
+ <div class="center"><h2>Our Courses</h2><p>Simple and effective Quran & Islamic education.</p></div>
+ <div class="grid">
+  <div class="card"><div class="icon">📖</div><h3>Noorani Qaida</h3><p>Build a strong foundation in Quran reading and pronunciation.</p></div>
+  <div class="card"><div class="icon">🕌</div><h3>Quran Reading</h3><p>Learn to read the Holy Quran correctly with regular practice.</p></div>
+  <div class="card"><div class="icon">✨</div><h3>Tajweed</h3><p>Improve your recitation with essential Tajweed rules.</p></div>
+  <div class="card"><div class="icon">🧠</div><h3>Hifz-ul-Quran</h3><p>Structured online memorization with teacher guidance.</p></div>
+  <div class="card"><div class="icon">📚</div><h3>Translation & Tafseer</h3><p>Understand Quranic meanings through guided lessons.</p></div>
+  <div class="card"><div class="icon">🌙</div><h3>Islamic Studies</h3><p>Learn duas, manners, Seerah and essential Islamic knowledge.</p></div>
+ </div>
+</section>
+
+<section id="about" style="background:var(--light)">
+ <div class="center"><h2>About Nobel Quran Academy</h2><p>Our goal is to make Quran learning accessible, convenient and meaningful for students around the world. We provide personalized online lessons in a friendly learning environment.</p></div>
+</section>
+
+<section>
+ <div class="center"><h2>Simple Learning Process</h2></div>
+ <div class="grid">
+  <div class="card"><h3>1. Register</h3><p>Fill out the short registration form.</p></div>
+  <div class="card"><h3>2. Free Trial</h3><p>Take your 3 days of free trial classes.</p></div>
+  <div class="card"><h3>3. Start Learning</h3><p>Choose a suitable schedule and continue your lessons.</p></div>
+ </div>
+</section>
+
+<section id="register" style="background:var(--light)">
+ <div class="center"><h2>Register for Free Trial</h2><p>Submit your details and contact us on WhatsApp.</p></div>
+ <form id="regForm">
+  <div class="field"><label>Student Name</label><input id="name" required></div>
+  <div class="field"><label>Age</label><input id="age" type="number" min="3"></div>
+  <div class="field"><label>Course</label><select id="course"><option>Quran Reading</option><option>Noorani Qaida</option><option>Tajweed</option><option>Hifz-ul-Quran</option><option>Translation & Tafseer</option><option>Islamic Studies</option></select></div>
+  <div class="field"><label>Preferred Timing</label><input id="time" placeholder="e.g. 7:00 PM Pakistan time"></div>
+  <div class="field"><label>Message</label><textarea id="note" rows="4"></textarea></div>
+  <button class="btn" type="submit">Send Registration on WhatsApp</button>
+  <div id="message"></div>
+ </form>
+</section>
+
+<footer>
+ <h2 style="color:#fff">Nobel Quran Academy</h2>
+ <p>Online Quran Classes • Male & Female Teachers • Flexible Timings</p>
+ <p>WhatsApp: <a href="https://wa.me/9231115912292">0311-15912292</a> &nbsp; | &nbsp; Email: <a href="mailto:abbasihamza123@gmail.com">abbasihamza123@gmail.com</a></p>
+ <p>© 2026 Nobel Quran Academy. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById('regForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value;
+ const age=document.getElementById('age').value;
+ const course=document.getElementById('course').value;
+ const time=document.getElementById('time').value;
+ const note=document.getElementById('note').value;
+ const text=`Assalamu Alaikum Nobel Quran Academy,%0A%0AI want to register for the 3 Days Free Trial.%0AStudent Name: ${encodeURIComponent(name)}%0AAge: ${encodeURIComponent(age)}%0ACourse: ${encodeURIComponent(course)}%0APreferred Timing: ${encodeURIComponent(time)}%0AMessage: ${encodeURIComponent(note)}`;
+ window.open('https://wa.me/9231115912292?text='+text,'_blank');
+ document.getElementById('message').textContent='Registration prepared. WhatsApp is opening...';
+});
+</script>
+</body>
+</html>
