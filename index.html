@@ -1,125 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nobel Quran Academy | Online Quran Classes</title>
+<title>Nobel Quran Academy | Learn Quran Online</title>
+<meta name="description" content="Nobel Quran Academy offers one-to-one online Quran classes with male and female teachers, flexible timings and a 3-day free trial.">
 <style>
-:root{--green:#0f5132;--gold:#d4a72c;--light:#f5faf7;--dark:#17352a;--muted:#64756d}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:var(--dark);line-height:1.6;background:#fff}
-nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #e4ece7;display:flex;justify-content:space-between;align-items:center;padding:14px 7%;z-index:20}
-.logo{font-weight:800;color:var(--green);font-size:21px}.logo span{color:var(--gold)}
-nav a{margin-left:18px;text-decoration:none;color:var(--dark);font-weight:700}
-.hero{background:linear-gradient(135deg,#eaf7ef,#fff);padding:70px 7%;display:grid;grid-template-columns:1.2fr 1fr;gap:35px;align-items:center}
-h1{font-size:48px;line-height:1.1;color:var(--green);margin:8px 0}h2{color:var(--green);font-size:31px}
-.btn{display:inline-block;background:var(--green);color:#fff;border:0;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:700;cursor:pointer;margin:5px 4px 5px 0}.gold{background:var(--gold);color:#222}
-.hero-card{background:var(--green);color:#fff;border-radius:18px;padding:32px}.hero-card h2{color:#fff}
-section{padding:55px 7%}.center{text-align:center}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:#fff;border:1px solid #e2ebe5;border-radius:14px;padding:22px;box-shadow:0 7px 22px #0f51320c}.card h3{color:var(--green)}
-section.alt{background:var(--light)}
-input,select,textarea{width:100%;padding:12px;border:1px solid #ccd9d1;border-radius:8px;margin:5px 0 14px;font-size:15px}
-label{font-weight:700}.form{max-width:650px;margin:auto}
-.lms{background:#102d23;color:#fff}.lms h2{color:#fff}.login-box{max-width:430px;margin:20px auto;background:#fff;color:var(--dark);padding:28px;border-radius:14px}
-.dashboard{display:none;background:#f4f8f6;padding:30px 7%}.dashhead{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.lesson{display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid #e4ece7;padding:14px 0}.progress{height:12px;background:#dce8e1;border-radius:20px;overflow:hidden}.bar{height:100%;width:0;background:var(--gold)}
-.notice{padding:12px;border-radius:8px;background:#fff4cf;margin:12px 0}.small{font-size:13px;color:var(--muted)}
-footer{background:#102d23;color:#fff;text-align:center;padding:35px 7%}footer a{color:#f4d36e}
-@media(max-width:800px){.hero{grid-template-columns:1fr}h1{font-size:38px}.grid{grid-template-columns:1fr}nav{flex-wrap:wrap}nav div:last-child{width:100%;margin-top:8px}nav a{margin:0 12px 0 0}}
+:root{--g:#0b5a38;--g2:#073d28;--gold:#d9aa2b;--cream:#f7fbf8;--ink:#18372b;--muted:#63766c;--line:#dfeae3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.65}
+nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);padding:14px 6%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:21px;font-weight:900;color:var(--g)}.logo b{color:var(--gold)}nav a{color:var(--ink);text-decoration:none;font-weight:700;margin-left:18px}
+.hero{padding:82px 6%;background:linear-gradient(135deg,#eaf7ef 0,#fff 70%);display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center}
+.badge{display:inline-block;background:#fff2c9;color:#795d0d;padding:7px 13px;border-radius:999px;font-weight:800;font-size:13px}
+h1{font-size:52px;line-height:1.08;color:var(--g);margin:15px 0}h2{font-size:34px;color:var(--g);margin:0 0 10px}h3{color:var(--g)}
+.btn{display:inline-block;border:0;border-radius:9px;padding:12px 20px;background:var(--g);color:#fff;text-decoration:none;font-weight:800;cursor:pointer;margin:5px 5px 5px 0}.btn.gold{background:var(--gold);color:#1d1d1d}.btn.light{background:#fff;color:var(--g);border:1px solid var(--g)}
+.hero-box{background:var(--g2);color:#fff;padding:30px;border-radius:20px;box-shadow:0 18px 40px #073d2825}.hero-box h2{color:#fff}.check{margin:12px 0}
+section{padding:65px 6%}.alt{background:var(--cream)}.center{text-align:center}.sub{color:var(--muted);max-width:760px;margin:0 auto 28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{border:1px solid var(--line);border-radius:15px;padding:24px;background:#fff;box-shadow:0 8px 24px #0b5a380b}.card .ico{font-size:31px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:28px}.stat{text-align:center;padding:20px;border-radius:13px;background:#fff;border:1px solid var(--line)}.stat strong{display:block;color:var(--g);font-size:27px}
+.steps{counter-reset:s}.step{position:relative;padding:20px 20px 20px 65px}.step:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:15px;width:40px;height:40px;border-radius:50%;background:var(--gold);display:grid;place-items:center;font-weight:900}
+.testimonial{background:#fff}.quote{font-size:18px}.stars{color:#c99816}
+.faq details{border-bottom:1px solid var(--line);padding:15px 0}.faq summary{cursor:pointer;font-weight:800;color:var(--g)}
+form{max-width:760px;margin:25px auto}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin-bottom:13px}label{font-weight:800;display:block}input,select,textarea{width:100%;padding:12px;border:1px solid #cbd9d1;border-radius:8px;font-size:15px}
+.notice{background:#fff5d7;padding:12px;border-radius:9px;margin:12px 0}.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+footer{background:#0b2d21;color:#fff;padding:40px 6%;text-align:center}footer a{color:#f3d56d}
+.float{position:fixed;right:20px;bottom:20px;background:#1d9b57;color:#fff;padding:14px 17px;border-radius:999px;text-decoration:none;font-weight:900;box-shadow:0 8px 22px #0003;z-index:60}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:55px}.grid,.stats,.contact,.two{grid-template-columns:1fr}h1{font-size:40px}nav{flex-wrap:wrap}nav div:last-child{width:100%;margin-top:10px}nav a{margin:0 12px 0 0}}
 </style>
 </head>
 <body>
 <nav>
- <div class="logo">Nobel <span>Quran Academy</span></div>
- <div><a href="#home">Home</a><a href="#courses">Courses</a><a href="#about">About</a><a href="#register">Register</a><a href="#lms">Student LMS</a></div>
+<div class="logo">Nobel <b>Quran Academy</b></div>
+<div><a href="#home">Home</a><a href="#courses">Courses</a><a href="#why">Why Us</a><a href="#register">Register</a><a href="#faq">FAQ</a></div>
 </nav>
 
 <section class="hero" id="home">
- <div><p style="color:#d4a72c;font-weight:800">ONLINE QURAN EDUCATION</p>
- <h1>Learn Quran Online<br>From Your Home</h1>
- <p>One-to-one online Quran classes for children and adults with qualified male and female teachers.</p>
- <a class="btn" href="#register">Start Free Trial</a>
- <a class="btn gold" href="https://wa.me/9231115912292" target="_blank">WhatsApp Us</a></div>
- <div class="hero-card"><h2>Why Nobel Quran Academy?</h2>
- <p>✓ 3 Days Free Trial</p><p>✓ Flexible Class Timings</p><p>✓ One-to-One 30-Minute Classes</p><p>✓ Male & Female Teachers</p><p>✓ Affordable Monthly Fees</p></div>
+<div>
+<span class="badge">🎁 3 DAYS FREE TRIAL</span>
+<h1>Learn Quran Online From the Comfort of Your Home</h1>
+<p>One-to-one online Quran classes for children and adults with qualified male and female teachers. Flexible timings and affordable monthly fees.</p>
+<a class="btn" href="#register">Start Free Trial</a>
+<a class="btn gold" href="https://wa.me/923115912292" target="_blank">WhatsApp Us</a>
+<div class="stats">
+<div class="stat"><strong>1-to-1</strong>Personal Classes</div>
+<div class="stat"><strong>30 min</strong>Each Class</div>
+<div class="stat"><strong>3 Days</strong>Free Trial</div>
+<div class="stat"><strong>24/7</strong>Flexible Options</div>
+</div>
+</div>
+<div class="hero-box">
+<h2>Why Nobel Quran Academy?</h2>
+<div class="check">✓ Male & Female Teachers</div><div class="check">✓ Flexible Timings</div><div class="check">✓ One-to-One Classes</div><div class="check">✓ Quran & Islamic Studies</div><div class="check">✓ Affordable Monthly Fees</div><div class="check">✓ Students Can Learn From Home</div>
+</div>
 </section>
 
-<section id="courses"><div class="center"><h2>Our Courses</h2><p>Simple and effective Quran & Islamic education.</p></div>
+<section id="courses">
+<div class="center"><h2>Our Quran & Islamic Courses</h2><p class="sub">Choose a course according to the student's level and learning goals.</p></div>
 <div class="grid">
-<div class="card"><h3>📖 Noorani Qaida</h3><p>Strong foundation in Quran reading and pronunciation.</p></div>
-<div class="card"><h3>🕌 Quran Reading</h3><p>Read the Holy Quran correctly with regular practice.</p></div>
-<div class="card"><h3>✨ Tajweed</h3><p>Improve recitation through essential Tajweed rules.</p></div>
-<div class="card"><h3>🧠 Hifz-ul-Quran</h3><p>Structured memorization with teacher guidance.</p></div>
-<div class="card"><h3>📚 Translation & Tafseer</h3><p>Understand Quranic meanings through guided lessons.</p></div>
-<div class="card"><h3>🌙 Islamic Studies</h3><p>Duas, manners, Seerah and essential Islamic knowledge.</p></div>
-</div></section>
-
-<section id="about" class="alt"><div class="center"><h2>About Nobel Quran Academy</h2>
-<p>Our goal is to make Quran learning accessible, convenient and meaningful for students around the world.</p></div></section>
-
-<section id="register" class="alt"><div class="center"><h2>Register for 3 Days Free Trial</h2></div>
-<form class="form" id="regForm">
-<label>Student Name</label><input id="rname" required>
-<label>Age</label><input id="rage" type="number" min="3">
-<label>Course</label><select id="rcourse"><option>Quran Reading</option><option>Noorani Qaida</option><option>Tajweed</option><option>Hifz-ul-Quran</option><option>Translation & Tafseer</option><option>Islamic Studies</option></select>
-<label>Preferred Timing</label><input id="rtime" placeholder="e.g. 7:00 PM Pakistan time">
-<button class="btn" type="submit">Send on WhatsApp</button>
-<p class="small">Your details will be prepared in WhatsApp for the academy.</p>
-</form></section>
-
-<section id="lms" class="lms">
-<div class="center"><h2>🎓 Student Learning Portal</h2><p>Access your lessons and track your learning progress.</p></div>
-<div class="login-box" id="loginBox">
-<h3>Student Login</h3>
-<label>Student Name</label><input id="loginName" placeholder="Enter your name">
-<label>Password</label><input id="loginPass" type="password" placeholder="Enter password">
-<button class="btn" onclick="login()">Login</button>
-<div class="notice"><b>Demo LMS:</b> Username <b>student</b> and password <b>1234</b></div>
-<p class="small">This first version is a simple front-end LMS demo. Real private student accounts require a database/backend.</p>
+<div class="card"><div class="ico">📖</div><h3>Noorani Qaida</h3><p>Build a strong foundation in Arabic letters, sounds and Quran reading.</p></div>
+<div class="card"><div class="ico">🕌</div><h3>Quran Reading</h3><p>Learn to read the Holy Quran accurately and confidently.</p></div>
+<div class="card"><div class="ico">✨</div><h3>Tajweed</h3><p>Improve pronunciation and recitation with essential Tajweed rules.</p></div>
+<div class="card"><div class="ico">🧠</div><h3>Hifz-ul-Quran</h3><p>A guided memorization plan with regular teacher supervision.</p></div>
+<div class="card"><div class="ico">📚</div><h3>Translation & Tafseer</h3><p>Study Quranic meanings and lessons in an understandable way.</p></div>
+<div class="card"><div class="ico">🌙</div><h3>Islamic Studies</h3><p>Learn duas, manners, Seerah, beliefs and essential Islamic knowledge.</p></div>
 </div>
 </section>
 
-<section class="dashboard" id="dashboard">
-<div class="dashhead"><div><h2 id="welcome">Student Dashboard</h2><p>Welcome to Nobel Quran Academy.</p></div><button class="btn" onclick="logout()">Logout</button></div>
-<div class="card"><h3>📊 My Progress</h3><div class="progress"><div class="bar" id="bar"></div></div><p id="progressText">0% completed</p></div>
-<div class="card" style="margin-top:20px"><h3>📚 My Course: Quran Reading</h3>
-<div class="lesson"><span><b>Lesson 1:</b> Quran Reading Basics</span><button class="btn" onclick="completeLesson(1)">Mark Complete</button></div>
-<div class="lesson"><span><b>Lesson 2:</b> Arabic Letters & Pronunciation</span><button class="btn" onclick="completeLesson(2)">Mark Complete</button></div>
-<div class="lesson"><span><b>Lesson 3:</b> Joining Letters</span><button class="btn" onclick="completeLesson(3)">Mark Complete</button></div>
-<div class="lesson"><span><b>Lesson 4:</b> Short Surahs Practice</span><button class="btn" onclick="completeLesson(4)">Mark Complete</button></div>
-<div class="lesson"><span><b>Lesson 5:</b> Tajweed Introduction</span><button class="btn" onclick="completeLesson(5)">Mark Complete</button></div>
+<section class="alt" id="why">
+<div class="center"><h2>Why Parents Choose Us</h2><p class="sub">A simple learning experience designed around the student's needs.</p></div>
+<div class="grid">
+<div class="card"><h3>👨‍🏫 Qualified Teachers</h3><p>Male and female teachers are available so families can choose a comfortable learning arrangement.</p></div>
+<div class="card"><h3>⏰ Flexible Schedule</h3><p>Choose a suitable class time according to your daily routine and availability.</p></div>
+<div class="card"><h3>👤 Personal Attention</h3><p>One-to-one lessons give the student direct teacher attention throughout the class.</p></div>
+<div class="card"><h3>🏠 Learn From Home</h3><p>No travel required. Students can join their Quran lesson from home.</p></div>
+<div class="card"><h3>💰 Affordable Fees</h3><p>Flexible and affordable monthly options for online Quran learning.</p></div>
+<div class="card"><h3>🎁 Free Trial</h3><p>Try the learning experience first with our 3-day free trial.</p></div>
 </div>
-<div class="grid" style="margin-top:20px"><div class="card"><h3>📅 Class Schedule</h3><p>Monday – Friday</p><p>30-minute one-to-one class</p><p>Timing: Contact academy</p></div>
-<div class="card"><h3>📝 Teacher Notes</h3><p>Keep practicing your daily lesson and revise before class.</p></div>
-<div class="card"><h3>📞 Need Help?</h3><p><a href="https://wa.me/9231115912292" target="_blank">Contact on WhatsApp</a></p></div></div>
 </section>
 
-<footer><h2 style="color:#fff">Nobel Quran Academy</h2><p>Online Quran Classes • Male & Female Teachers • Flexible Timings</p>
-<p>WhatsApp: <a href="https://wa.me/9231115912292">0311-15912292</a> | Email: <a href="mailto:abbasihamza123@gmail.com">abbasihamza123@gmail.com</a></p>
-<p>© 2026 Nobel Quran Academy. All rights reserved.</p></footer>
+<section>
+<div class="center"><h2>How It Works</h2><p class="sub">Getting started takes only a few simple steps.</p></div>
+<div class="steps">
+<div class="step"><h3>Register</h3><p>Send the student's basic details through the registration form.</p></div>
+<div class="step"><h3>Choose Course & Timing</h3><p>Tell us the preferred course, timing and teacher preference.</p></div>
+<div class="step"><h3>Take Your 3-Day Free Trial</h3><p>Attend your trial classes and experience one-to-one online learning.</p></div>
+<div class="step"><h3>Continue Learning</h3><p>Choose a regular schedule and continue your Quran education.</p></div>
+</div>
+</section>
+
+<section class="alt">
+<div class="center"><h2>What Students Can Learn</h2></div>
+<div class="grid">
+<div class="card"><h3>Quran Reading</h3><p>Letters → words → verses → fluent reading.</p></div>
+<div class="card"><h3>Tajweed</h3><p>Makharij, pronunciation and practical recitation rules.</p></div>
+<div class="card"><h3>Daily Islamic Life</h3><p>Prayer, duas, manners and essential Islamic knowledge.</p></div>
+</div>
+</section>
+
+<section id="register">
+<div class="center"><h2>Register for Your 3-Day Free Trial</h2><p class="sub">Fill in the form and it will prepare a WhatsApp message for Nobel Quran Academy.</p></div>
+<form id="reg">
+<div class="two">
+<div class="field"><label>Student Name *</label><input id="name" required></div>
+<div class="field"><label>Age</label><input id="age" type="number" min="3"></div>
+</div>
+<div class="two">
+<div class="field"><label>Country</label><input id="country" placeholder="e.g. Pakistan, UK, USA"></div>
+<div class="field"><label>Parent/Guardian WhatsApp</label><input id="parent" placeholder="+92..."></div>
+</div>
+<div class="two">
+<div class="field"><label>Course *</label><select id="course" required><option>Quran Reading</option><option>Noorani Qaida</option><option>Tajweed</option><option>Hifz-ul-Quran</option><option>Translation & Tafseer</option><option>Islamic Studies</option></select></div>
+<div class="field"><label>Teacher Preference</label><select id="teacher"><option>No preference</option><option>Male Teacher</option><option>Female Teacher</option></select></div>
+</div>
+<div class="field"><label>Preferred Timing</label><input id="time" placeholder="e.g. 7:00 PM Pakistan time"></div>
+<div class="field"><label>Additional Message</label><textarea id="msg" rows="4" placeholder="Tell us anything important about the student..."></textarea></div>
+<div class="notice">📱 After submitting, WhatsApp will open with your registration details ready to send.</div>
+<button class="btn" type="submit">Send Registration on WhatsApp</button>
+</form>
+</section>
+
+<section class="alt" id="faq">
+<div class="center"><h2>Frequently Asked Questions</h2></div>
+<div class="faq" style="max-width:850px;margin:auto">
+<details><summary>How long is each class?</summary><p>Our standard one-to-one class is 30 minutes.</p></details>
+<details><summary>Do you offer male and female teachers?</summary><p>Yes, male and female teachers are available.</p></details>
+<details><summary>Is there a free trial?</summary><p>Yes. New students can request a 3-day free trial.</p></details>
+<details><summary>Can children learn from home?</summary><p>Yes. Classes are online, so students can learn from home.</p></details>
+<details><summary>What courses are available?</summary><p>Noorani Qaida, Quran Reading, Tajweed, Hifz-ul-Quran, Translation & Tafseer and Islamic Studies.</p></details>
+</div>
+</section>
+
+<section>
+<div class="center"><h2>Ready to Start?</h2><p class="sub">Give your child or yourself the opportunity to learn the Quran with personal guidance.</p>
+<a class="btn" href="#register">🎁 Claim Free Trial</a><a class="btn gold" href="https://wa.me/923115912292" target="_blank">Chat on WhatsApp</a></div>
+</section>
+
+<footer>
+<h2 style="color:#fff">Nobel Quran Academy</h2>
+<p>Online Quran Classes • Male & Female Teachers • Flexible Timings • 3 Days Free Trial</p>
+<p>WhatsApp: <a href="https://wa.me/923115912292">0311-15912292</a> &nbsp; | &nbsp; Email: <a href="mailto:abbasihamza123@gmail.com">abbasihamza123@gmail.com</a></p>
+<p>© 2026 Nobel Quran Academy. All rights reserved.</p>
+</footer>
+<a class="float" href="https://wa.me/923115912292" target="_blank">💬 WhatsApp</a>
 
 <script>
-const wa='9231115912292';
-document.getElementById('regForm').addEventListener('submit',e=>{
- e.preventDefault();
- let t=`Assalamu Alaikum Nobel Quran Academy,%0A%0AI want to register for the 3 Days Free Trial.%0AStudent Name: ${encodeURIComponent(rname.value)}%0AAge: ${encodeURIComponent(rage.value)}%0ACourse: ${encodeURIComponent(rcourse.value)}%0APreferred Timing: ${encodeURIComponent(rtime.value)}`;
- window.open(`https://wa.me/${wa}?text=${t}`,'_blank');
+document.getElementById('reg').addEventListener('submit',function(e){
+e.preventDefault();
+const v=id=>document.getElementById(id).value;
+const text=`Assalamu Alaikum Nobel Quran Academy,%0A%0AI want to register for the 3 Days Free Trial.%0A%0AStudent Name: ${encodeURIComponent(v('name'))}%0AAge: ${encodeURIComponent(v('age'))}%0ACountry: ${encodeURIComponent(v('country'))}%0AParent/Guardian WhatsApp: ${encodeURIComponent(v('parent'))}%0ACourse: ${encodeURIComponent(v('course'))}%0ATeacher Preference: ${encodeURIComponent(v('teacher'))}%0APreferred Timing: ${encodeURIComponent(v('time'))}%0AMessage: ${encodeURIComponent(v('msg'))}`;
+window.open('https://wa.me/923115912292?text='+text,'_blank');
 });
-function login(){
- let n=document.getElementById('loginName').value.trim(), p=document.getElementById('loginPass').value;
- if((n.toLowerCase()==='student'||n.length>1)&&p==='1234'){
-  localStorage.setItem('nqaStudent',n||'Student'); showDash();
- } else alert('For this demo use username: student and password: 1234');
-}
-function showDash(){
- document.getElementById('loginBox').style.display='none';document.getElementById('dashboard').style.display='block';
- document.getElementById('welcome').textContent='Assalamu Alaikum, '+(localStorage.getItem('nqaStudent')||'Student')+' 👋';updateProgress();
-}
-function logout(){localStorage.removeItem('nqaStudent');location.reload()}
-function completeLesson(i){localStorage.setItem('lesson'+i,'done');updateProgress()}
-function updateProgress(){
- let c=[1,2,3,4,5].filter(i=>localStorage.getItem('lesson'+i)==='done').length,p=c*20;
- document.getElementById('bar').style.width=p+'%';document.getElementById('progressText').textContent=p+'% completed';
- [1,2,3,4,5].forEach(i=>{let b=document.querySelectorAll('.lesson')[i-1].querySelector('button');if(localStorage.getItem('lesson'+i)==='done'){b.textContent='✓ Completed';b.disabled=true}});
-}
-if(localStorage.getItem('nqaStudent'))showDash();
 </script>
-</body></html>
+</body>
+</html>
